@@ -1,0 +1,349 @@
+/* Variables globales */
+:root {
+    --primary-color: #0066cc; /* Bleu */
+    --secondary-color: #ffcc00; /* Jaune */
+    --background-color: #f9f9f9; /* Blanc cassé */
+    --text-color: #333333; /* Gris foncé */
+    --white-color: #ffffff;
+}
+
+/* Styles de base */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.auth-buttons {
+    display: flex; /* Active la flexbox pour un alignement facile. */
+    justify-content: center; /* Centre les boutons horizontalement. */
+    align-items: center; /* Centre les boutons verticalement. */
+    margin: 20px auto; /* Ajoute un espace autour et centre le conteneur lui-même si nécessaire. */
+    gap: 15px; /* Espace entre les boutons. */
+}
+
+.auth-buttons button {
+    background-color: maroon; /* Couleur d'arrière-plan. */
+    color: var(--white-color); /* Couleur du texte. */
+    height: 45px; /* Hauteur des boutons. */
+    width: 150px; /* Largeur des boutons. */
+    font-size: 16px; /* Taille du texte. */
+    border: none; /* Supprime les bordures par défaut. */
+    border-radius: 5px; /* Coins arrondis. */
+    cursor: pointer; /* Change le curseur en main au survol. */
+    transition: transform 0.2s, box-shadow 0.2s; /* Effets de survol. */
+}
+
+.auth-buttons button:hover {
+    transform: scale(1.05); /* Agrandit légèrement le bouton au survol. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre élégante au survol. */
+}
+
+header {
+    background-image: url(baobab.jpg);
+    color: var(--white-color);
+    text-align: center;
+    padding: 2rem;
+}
+/* Section Explorer les Compétences */
+.explore-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem; /* Espace entre les éléments */
+    background-color: #f4f4f4; /* Couleur de fond pour contraster avec le texte */
+}
+
+.explore-skills .module {
+    text-decoration: none;
+    color: #333; /* Assurez-vous que la couleur contraste bien avec le fond */
+}
+
+.explore-skills .module h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: whitesmoke; /* Couleur bien visible */
+}
+
+.explore-skills .module p {
+    font-size: 1.2rem;
+    color: white; /* Couleur bien visible */
+}
+
+.explore-skills img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section a h2 {
+    color: #0066cc;
+}
+section a p {
+    color: #0066cc;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+header {
+    background-image: url('baobab.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header .logo img {
+    max-height: 100px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color:maroon;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: var(--white-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+/* Modules */
+.module {
+    background:maroon;
+    color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.module:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.module h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.module p {
+    font-size: 1rem;
+}
+
+/* Images dans les sections */
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulaires */
+.form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-color);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-container input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Styles pour le slider */
+.slider {
+    width: 100%; /* Largeur totale du slider */
+    max-width: 1200px; /* Largeur maximale */
+    height: 400px; /* Hauteur fixe du slider */
+    margin: 20px auto; /* Centré horizontalement */
+    overflow: hidden; /* Masque les parties débordantes */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre élégante */
+}
+
+/* Conteneur des diapositives */
+.slides {
+    display: flex; /* Affiche les images en ligne */
+    width: 400%; /* Largeur totale = 4 fois le conteneur */
+    animation: slide 20s infinite; /* Animation de défilement */
+}
+
+/* Chaque slide (image) */
+.slide {
+    width: 100%; /* Largeur de chaque slide = largeur du conteneur */
+    flex-shrink: 0; /* Empêche les slides de rétrécir */
+}
+
+.slide img {
+    width: 60%; /* Ajuste les images à la largeur du conteneur */
+    height: 30%; /* Ajuste les images à la hauteur du conteneur */
+    object-fit: cover; /* Coupe les images si elles débordent, sans les déformer */
+    display: block;
+}
+
+/* Animation pour le slider */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* Affiche la première image */
+    }
+    25% {
+        transform: translateX(-100%); /* Deuxième image */
+    }
+    50% {
+        transform: translateX(-200%); /* Troisième image */
+    }
+    75% {
+        transform: translateX(-300%); /* Quatrième image */
+    }
+    100% {
+        transform: translateX(0); /* Retour à la première image */
+    }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-socials a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  color: #ff9800;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: maroon;
+    color: var(--white-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
